@@ -82,7 +82,7 @@ jobs:
         tflint
     - name: Post TFLint Comment
       if: ${{ always() && (steps.tflint.outcome == 'success' || steps.tflint.outcome == 'failure') }}
-      uses: phoenix-actions/opentofu-pr-commenter@dpr-update-commenter
+      uses: phoenix-actions/opentofu-pr-commenter@v1
       with:
         commenter_type: tflint
         commenter_input: ${{ format('{0}{1}', steps.tflint.outputs.stdout, steps.tflint.outputs.stderr) }}
