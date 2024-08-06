@@ -45,7 +45,7 @@ runs:
       if: ${{ inputs.use_beta_version == 'true' }}
       # append branch with a pound (#) if developing.  e.g., `commenter.git#my-branch`
       run: |
-        docker build --build-arg TOFU_VERSION=${{ steps.tf_version.outputs.version }} -t commenter https://github.com/phoenix-actions/opentofu-pr-commenter.git#v3-beta
+        docker build --build-arg TOFU_VERSION=${{ steps.tf_version.outputs.version }} -t commenter https://github.com/phoenix-actions/opentofu-pr-commenter.git#v1-beta
       shell: bash
     - name: Run commenter image (plan)
       if: ${{ inputs.commenter_type == 'plan' }}

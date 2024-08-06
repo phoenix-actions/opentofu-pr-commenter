@@ -71,7 +71,7 @@ jobs:
         if: ${{ env.TESTING == 'true' }}
       - name: Test
         if: ${{ env.TESTING == 'true' }}
-        uses: phoenix-actions/opentofu-pr-commenter@v3-beta #set to your branch for testing and switch back to v3-beta when done.
+        uses: phoenix-actions/opentofu-pr-commenter@v1-beta #set to your branch for testing and switch back to v1-beta when done.
         with:
           commenter_type: plan
           # Should only be setting commenter_input or commenter_plan_path (commenter_plan_path only for plan commenter type)
